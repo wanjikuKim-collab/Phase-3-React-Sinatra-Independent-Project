@@ -50,7 +50,9 @@ class ApplicationController < Sinatra::Base
     movie = Movie.find_by(id: params[movie_id])
     review = movie.reviews.build(
       ratings: params[:ratings],
-      comment: params[:comment]
+      comment: params[:comment],
+      viewer_id: params[:viewer_id],
+      movie_id: params[:movie_id]
     )
 
     review.to_json(only:[:id, :ratings, :comment], include:{
@@ -65,5 +67,11 @@ class ApplicationController < Sinatra::Base
       comment: params[:comment]
     )
     review.to_json(only:[:id, :ratings, :comment], include:{:movie => {:only => :title}})
+  end
+
+  delete '/review/:id' do
+    review = review = Review.find(params[:id])
+    review.destroy
+    review.to_json
   end
 end
