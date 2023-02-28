@@ -28,17 +28,12 @@ ActiveRecord::Schema.define(version: 2023_02_28_022345) do
     t.integer "movie_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["movie_id"], name: "index_reviews_on_movie_id"
-    t.index ["viewer_id"], name: "index_reviews_on_viewer_id"
   end
 
   create_table "viewers", force: :cascade do |t|
     t.string "name"
-    t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "reviews", "movies"
-  add_foreign_key "reviews", "viewers"
 end
