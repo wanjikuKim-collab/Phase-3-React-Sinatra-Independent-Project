@@ -32,6 +32,7 @@ function NavBar() {
           {
             links.map((link)=>{
               return(<li key={link.name}>
+                {/* <a href="/home" > Home</a> */}
                 <NavLink className={styles.Link} to={link.link}>{link.name}</NavLink>
               </li>)
             })
