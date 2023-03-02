@@ -63,6 +63,13 @@ Movie.create([
 	}
 ])
 
+5.times do
+	Viewer.create(
+		name: Faker::Name.name,
+		email: Faker::Internet.email
+	)
+end
+
 
 # Review.create(ratings: 4.7, comment: "I binge watched the entire season in one go and it had me at the edge of my seat the entire time. Right when you think that things are starting to come together you're quickly given a curveball that leaves you totally shocked. ", viewer_id: 1, movie_id: 1)
 # Review.create(ratings: 5, comment: "(NO spoilers) This is literally THE BEST TV SHOW I HAVE SEEN IN YEARS!!!! ", viewer_id: 4, movie_id: 1)
@@ -72,16 +79,16 @@ Movie.create([
         ratings: Faker::Number.between(from: 0, to: 5),
         comment: Faker::Lorem.sentence,
         movie_id: rand(Movie.first.id..Movie.last.id),
-        viewer_id: rand(1..5)
+        viewer_id: rand(Viewer.first.id..Viewer.last.id)
     )
 end
 
 
-Viewer.create(name: "Patricia Sibaja")
-Viewer.create(name: "James Murithi")
-Viewer.create(name: "Alex Tweng")
-Viewer.create(name: "Maxwell Wachira")
-Viewer.create(name: "Kim Sung Wu")
+# Viewer.create(name: "Patricia Sibaja")
+# Viewer.create(name: "James Murithi")
+# Viewer.create(name: "Alex Tweng")
+# Viewer.create(name: "Maxwell Wachira")
+# Viewer.create(name: "Kim Sung Wu")
 
 
 
