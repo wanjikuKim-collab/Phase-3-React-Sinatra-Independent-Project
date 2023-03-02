@@ -16,19 +16,19 @@ function BillBoard (){
                     <div className={styles.description}>
                         An aimless gamer and his two friends find themselves in a paralle Tokyo, where they're forced to compete in a series of sadistic games to survive.
                     </div>
-                    <div className={styles. buttonLinks}>
-                        <a className='btn btn-light btn-lg'> 
+                    <div className={styles.buttonLinks}>
+                        <a className='billboard_btn btn btn-light btn-lg' href='/'> 
                         <i className="icon play" />
-                        <span>Play</span>               
+                            <span>Play</span>               
                         </a>
-                        <button className='btn btn-secondary btn-lg'>
+                        <button className='billboard_btn btn btn-secondary btn-lg'>
                         <i className="icon info circle" />
-                        More Info
+                            More Info
                         </button>
-                    </div>
+                    </div> 
                 </div>
             </div>
-        </div>
+        </div>        
     )
 }
 
