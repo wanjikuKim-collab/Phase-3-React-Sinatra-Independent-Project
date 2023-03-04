@@ -2,7 +2,7 @@ class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
   # Displays all movies in the database
-  get '/movies' do
+  get '/mylist' do
     movies = Movie.all
     movies.to_json(only:[:id, :title, :overview, :image, :genre],include:{
       reviews:{only: [:ratings, :comment],include:{
@@ -10,7 +10,7 @@ class ApplicationController < Sinatra::Base
       }}})
   end
 
-  get '/movies/:id' do
+  get '/mylist/:id' do
     movie = Movie.find(params[:id])
     movie.to_json(only:[:id, :title, :overview, :image, :genre],include:{
       reviews:{only: [:ratings, :comment],include:{
@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
       }}})
   end
 
-  post '/movies/' do
+  post '/mylist/new' do
     new_movie = Movie.create(
       title: params[:title],
       image: params[:image],
@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
   end
 
 
-  delete '/movies/:id' do
+  delete '/mylist/:id' do
     movie=Movie.find(params[:id]).destroy
     movie.to_json
   end
@@ -128,7 +128,7 @@ end
 
 
   ## to get all the people who've watched the movie
-  get '/movies/:id/users' do
+  get '/mylist/:id/users' do
     ## get movie
     movie = Movie.find(params[:id])
     movie.reviews.find_all{|review| review.viewer_id}.to_json(include: {viewers: {only: [:id, :name, :email]}})
