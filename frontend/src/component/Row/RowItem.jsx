@@ -1,9 +1,10 @@
 import React from "react";
 import './Row.css'
 import Review from './Review';
+import { NavLink } from 'react-router-dom';
 
 
-function RowItem({image, title, overview,genre,reviews}){
+function RowItem({id,image, title, overview,genre,reviews}){
     console.log(image)
     return(
         <>
@@ -19,7 +20,7 @@ function RowItem({image, title, overview,genre,reviews}){
                         <i className="icon thumbs up"/>
                     </div>
                     <div className="dropdown">
-                        <i className="icon angle down circle" style={{marginLeft: '10px'}}/>
+                        <NavLink to={`/mylist/${id}`}><i className="icon angle down circle" style={{marginLeft: '10px'}}/></NavLink>
                     </div>
                 </div>
                 <div className="itemInfoTop">

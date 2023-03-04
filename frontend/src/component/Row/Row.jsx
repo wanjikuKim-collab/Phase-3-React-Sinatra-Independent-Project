@@ -3,6 +3,7 @@ import './Row.css'
 import RowItem from './RowItem';
 
 
+
 function Row(){
     const [movies, setMovies]=useState([]);
     // const [isHovered, setIsHovered] = useState(false)
@@ -28,6 +29,7 @@ function Row(){
                 <div className="row_poster">
                     <RowItem
                         key={movie.id}
+                        id={movie.id}
                         image={movie.image}
                         title ={movie.title}
                         overview={movie.overview}

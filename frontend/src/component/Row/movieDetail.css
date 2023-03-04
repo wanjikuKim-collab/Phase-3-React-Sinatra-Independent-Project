@@ -1,0 +1,137 @@
+.banner{
+    width:100%;
+    height: 56.25vw;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+}
+
+.banner::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    
+}
+
+.billboard__fadeBottom{
+    background-color: transparent;
+    background-image: linear-gradient(
+        to bottom,
+        hsla(0,0%,8%,0) 0,
+        hsla(0,0%,8%,.15) 15%,
+        hsla(0,0%,8%,.35) 29%,
+        hsla(0,0%,8%,.58) 44%,
+        #141414 68%,
+        #141414 100%
+        );
+    background-position: 0 top;
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: -1px;
+    height: 14.7vw;
+    opacity: 1;
+    top: auto;
+    width: 100%;
+
+}
+
+.movie-content{
+    display: flex;
+    align-items: flex-start;
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -200px;
+    position: relative;
+    padding:0.2rem;
+}
+
+.movie-content__poster{
+    flex: 1;
+}
+
+.movie-content__poster__img{
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 165%;
+    border-radius: 25px;
+    margin-left: 20px
+}
+
+
+.item_info{
+    margin-left: 30px;
+    width: 70%;
+    color: #e5e5e5;
+}
+
+.icons{
+    font-size: 27px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.icon.circle{
+ padding: 5px;
+
+}
+
+.itemInfoTop{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: grey;
+    font-weight: 900;
+}
+
+.overview{
+   font-size: 13px;
+   margin-bottom: 10px;
+}
+
+.genre{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.genre_item{
+    list-style:circle;
+    margin-right: 10px;
+    color: rgb(136, 134, 134);
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.reviews h1{
+    font-size: 25px;
+    color: #e50914;
+}
+.review{
+    display: flex;
+    justify-content:space-between;
+    margin: 5px;
+}
+.review i{
+    padding-right: 44px;
+}
+
+.review_form{
+    display: block;
+}
