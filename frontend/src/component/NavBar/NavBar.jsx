@@ -9,7 +9,7 @@ function NavBar() {
    { name:'Home', link:"/"},
    { name:'TV Shows', link:"/series"},
    { name:'Movies', link:"/movies"},
-   { name:'New & Popular', link:"/new&popular"},
+   { name:'New & Popular', link:"/mylist/new"},
    { name:'My List', link:"/mylist"},
   ]
 // displaying black background on scrolling down
