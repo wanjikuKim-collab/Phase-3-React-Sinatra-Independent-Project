@@ -2,23 +2,28 @@ import React, { useEffect, useState } from "react";
 import Review from './Review';
 import './movieDetail.css'
 import { useParams } from "react-router-dom"
+import NavBar from '../NavBar/NavBar'
+import Footer from "../Footer/Footer";
 
+
+// renders single movie with all the details, reviews and review form
 function MovieDetail() {
     const [movie, setMovie] = useState(null);
     const params = useParams()
     
     useEffect(() => {
-        fetch(`http://localhost:9294/movies/${params.id}`)
+        fetch(`http://localhost:9292/mylist/${params.id}`)
             .then(r => r.json())
             .then(movie => setMovie(movie))
     }, [params.id])
-    console.log(movie)
+
     if (!movie) return <h2>Loading...</h2>
     
     const { image,overview,genre,reviews } = movie   
     
-    return (
+    return (        
         <section className="movie_detail">
+            <NavBar/>
             <div className="banner" style={{backgroundImage: `url(${image})`}}>
                 <div className= "billboard__fadeBottom"/>
             </div>
@@ -53,7 +58,7 @@ function MovieDetail() {
                     <div className="reviews">
                         <h1>REVIEWS</h1>
                         {reviews.map(review=>(
-                        <li className='review'>{review.comment} 
+                        <li id={review.id} className='review'>{review.comment} 
                         <span>
                             <i className="icon edit"/>
                             <i className="icon close"/>
@@ -66,6 +71,7 @@ function MovieDetail() {
                     </div>
                 </div>        
             </div>
+            <Footer />
         </section>
     );
 }

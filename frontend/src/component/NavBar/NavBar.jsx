@@ -29,14 +29,13 @@ function NavBar() {
       <div className={styles.mainNav}>
         <img className={styles.logo} src={logo} alt="Netflix Logo"/>      
         <ul className={styles.navItems}>
-          {
+        {
             links.map((link)=>{
               return(<li key={link.name}>
-                {/* <a href="/home" > Home</a> */}
                 <NavLink className={styles.Link} to={link.link}>{link.name}</NavLink>
               </li>)
             })
-          }       
+          }
         </ul>       
       </div>
       <SecondaryNAvigation />
