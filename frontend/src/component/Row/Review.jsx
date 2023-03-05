@@ -9,9 +9,18 @@ function Review(){
       textarea:""
     })
 
-    const handleSubmit = e => {
-        e.preventDefault()
-    }
+    // const handleSubmit = e => {
+    //     e.preventDefault()
+    //     fetch("http://localhost:9292/reviews/", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(formData)
+    //     })
+    //         .then(r => r.json())
+    //         .then(movie => console.log(movie))
+    // }
     
     function handleChange(e){
       const key = e.target.id
@@ -24,16 +33,7 @@ function Review(){
     return(
     <div className='App d-flex flex-column align-items-center'>
         <h1>How was the show?</h1>
-        <Form style={{ width: '300px' }} onSubmit={handleSubmit}>
-          <Form.Group>
-            <Form.Label htmlFor='name'>Name</Form.Label>
-            <Form.Control 
-            id='name' 
-            type='text' 
-            value={formData.name} 
-            onChange={handleChange} 
-            />
-          </Form.Group>
+        <Form style={{ width: '300px' ,color: "red"}}>
           <Form.Group>
             <Form.Label htmlFor='rating'>Rating</Form.Label>
             <Form.Control 

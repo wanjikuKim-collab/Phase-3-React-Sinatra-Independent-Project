@@ -7,7 +7,7 @@ puts "🌱 Seeding spices..."
 Movie.create([
 	{
 		image: "https://m.media-amazon.com/images/M/MV5BM2ZmMjEyZmYtOGM4YS00YTNhLWE3ZDMtNzQxM2RhNjBlODIyXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",		
-		genre: "Fantasy,Comedy horror,Supernatural",
+		genre: "Fantasy,Comedy,Supernatural",
 		title: "Wednesday",
 		overview: "Wednesday Addams is sent to Nevermore Academy, a bizarre boarding school where she attempts to master her psychic powers, stop a monstrous killing spree of the town citizens, and solve the supernatural mystery that affected her family 25 years ago — all while navigating her new relationships."
 	}, {
@@ -16,7 +16,7 @@ Movie.create([
 		title: "Lucifer",
 		overview: "Bored and unhappy as the Lord of Hell, Lucifer Morningstar abandoned his throne and retired to Los Angeles, where he has teamed up with LAPD detective Chloe Decker to take down criminals. But the longer he's away from the underworld, the greater the threat that the worst of humanity could escape."
 	}, {
-		image: "https://upload.wikimedia.org/wikipedia/en/2/24/All_of_Us_Are_Dead.jpeg",
+		image: "https://asianwiki.com/images/3/33/All_of_Us_Are_Dead-cp1.jpeg",
 		genre: "K-drama, Apocalypse,Horror",
 		title: "All of Us Are Dead",
 		overview: "A high school becomes ground zero for a zombie virus outbreak. Trapped students must fight their way out — or turn into one of the rabid infected."
