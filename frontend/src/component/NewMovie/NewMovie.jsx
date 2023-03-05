@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
@@ -8,25 +7,23 @@ const[image,setImage]= useState("")
 const[title,setTitle]= useState("")
 const[overview,setOverview]= useState("")
 const[genre,setGenre]= useState("")
-const[reviews,setReviews]= useState("")
-
-const navigate = useNavigate()
 
     function handleSubmit(e) {
         e.preventDefault()
         const formData = {
-           movie: { image, title, overview,genre,reviews }
+           movie: { image, title, overview,genre}
         }
-        fetch("http://localhost:9294/movies/", {
+        console.log(formData.movie)
+        fetch("http://localhost:9292/mylist/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(formData.movie)
         })
             .then(r => r.json())
             .then(movie => {
-                navigate(`/mylist/${movie.id}`)
+                window.location.href = `http://localhost:3000/mylist/${movie.id}`
             })
     }
     
@@ -39,7 +36,6 @@ const navigate = useNavigate()
                 <Form.Label htmlFor="title">Title:</Form.Label>
                 <Form.Control type="text" id="title" value={title} onChange={e => setTitle(e.target.value)} />
                 </Form.Group>
-
                 <Form.Group className="mb-3" >
                 <Form.Label htmlFor="image">Image:</Form.Label>
                 <Form.Control type="text" id="image" value={image} onChange={e => setImage(e.target.value)} />
@@ -47,10 +43,6 @@ const navigate = useNavigate()
                 <Form.Group className="mb-3" >
                 <Form.Label htmlFor="overview">Overview:</Form.Label>
                 <Form.Control type="text" id="overview" value={overview} onChange={e => setOverview(e.target.value)} />
-                </Form.Group>
-                <Form.Group className="mb-3" >
-                <Form.Label htmlFor="reviews">Reviews:</Form.Label>
-                <Form.Control type="text" id="reviews" value={reviews} onChange={e => setReviews(e.target.value)} />
                 </Form.Group>
                 <Form.Group className="mb-3" >
                 <Form.Label htmlFor="genre">Genre:</Form.Label>
