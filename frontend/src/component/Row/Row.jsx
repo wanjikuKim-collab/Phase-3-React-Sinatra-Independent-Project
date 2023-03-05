@@ -11,14 +11,19 @@ function Row(){
     //fetch my list movies
     //side-effect of movies being rendered
     useEffect(() => {
-        fetch("http://localhost:9294/movies")
+        fetch("http://localhost:9292/mylist")
           .then((r) => r.json())
           //Update state by passing the array of movies to setMovies  
           .then((movies) => setMovies(movies));
       }, []);
       console.log(movies)
 
+      function handleDeleteItem(deletedItem) {
+        const updatedItems = movies.filter((movie) => movie.id !== deletedItem.id);
+        setMovies(updatedItems);
+      }
 
+      
   return (
     <div className='row'>
         <h2>TV Shows</h2>
@@ -29,12 +34,8 @@ function Row(){
                 <div className="row_poster">
                     <RowItem
                         key={movie.id}
-                        id={movie.id}
-                        image={movie.image}
-                        title ={movie.title}
-                        overview={movie.overview}
-                        genre = {movie.genre}
-                        reviews= {movie.reviews}
+                        movie={movie}
+                        onDeleteItem={handleDeleteItem}
                     />
                 </div>
             ))}                

@@ -6,6 +6,7 @@
     height: 56.25vw;
     width: 100%;
     z-index: -2;
+    margin-top: -190px;
 }
 .innerContainer{
     position: absolute;
@@ -17,23 +18,17 @@
     object-fit: contain;
 }
 
+.info img{
+    width:100%;
+    object-fit: contain;    
+}
+
 .description{
     margin: 0.9rem;
     font-size: 1rem;
     color: #e5e5e5;
 }
 
-.billboard.info{   
-    position: absolute; 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    left: 4%;    
-    top: 0;
-    width: 36%;
-    z-index: 10;
-    bottom: 35%;
-}
 
 .billboard .info{   
     position: absolute; 
@@ -45,6 +40,8 @@
     width: 36%;
     z-index: 10;
     bottom: 35%;
+    margin-top: 520px;
+
 }
 
 .buttonLinks{
@@ -60,7 +57,7 @@
     justify-content: space-between;
     margin: 0 15px 15px 0;
     padding: 0.5rem 2rem;
-    font-size:23px;   
+    font-size:24px;   
     
 }
 
