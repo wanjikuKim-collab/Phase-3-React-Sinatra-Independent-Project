@@ -7,9 +7,7 @@ import logo from './assets/logo.png'
 function NavBar() {
   const links = [
    { name:'Home', link:"/"},
-   { name:'TV Shows', link:"/series"},
-   { name:'Movies', link:"/movies"},
-   { name:'New & Popular', link:"/mylist/new"},
+   { name:'Add Show', link:"/mylist/new"},
    { name:'My List', link:"/mylist"},
   ]
 // displaying black background on scrolling down
