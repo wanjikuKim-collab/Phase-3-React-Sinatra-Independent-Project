@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
       }}})
   end
 
-  post '/mylist/new' do
+  post '/mylist/' do
     new_movie = Movie.create(
       title: params[:title],
       image: params[:image],
