@@ -4,11 +4,6 @@
 - [Faith Kimani](https://github.com/wanjikuKim-collab)
 
 ## Introduction
-
-- Build a web basic API with Sinatra and Active Record to support a React
-  frontend
-
-## Introduction
 My application is a simple movie review app. You can Create a new review, view(Read) a list of all reviews on a given movie/series, edit(Update) an already existing movie and finally delete a review. This was based of my phase 2 React Netflix clone which, as the name suggests was a Netflix clone. To build on this concept, I wanted to add a Netflix review application where viewers are able to give feedback on movies and shows watched. 
 
 This project is separated into two applications:
@@ -30,6 +25,71 @@ by a separate **React frontend** that interacts with the database via the API.
 * HTML
 * React
 
+### Deployment
+
+- The frontend component is found here: [Netflix Clone frontend ]().
+
+- The backend component ().
+
+## Setup/Installation Requirements (for local development)
+##### Backend
+1. Download the zip file under the 'Code' tab.
+2. Extract files from the zip file.
+3. Open the extracted folder with VS Code.
+4.To access the backend, `cd` into the `backend` directory
+5. To install the required gems, run:
+```console
+bundle install
+```
+6. In your VS Code terminal to migrate the database and to seed data into the database from the [seeds.rb file](db/seeds.rb), run:
+```console
+bundle exec db:migrate db:seed
+```
+7. In your VS Code terminal to execute run the server, run:
+```console
+bundle exec rake server
+```
+8. And then, you are good to go. <br> For testing, use the VS Code terminal and the seed (test) data provided while in pry mode.To access pry open a new terminal, cd into backend and run:
+```console
+rake console
+```
+#####Frontend Setup
+To get started, `cd` into the `frontend` directory. Then run:
+
+```console
+$ npm install
+```
+
+This will install the React project dependencies. Next, run this in a new terminal:
+
+```console
+$ npm start
+```
+Then visit [http://localhost:3000](http://localhost:3000) in the browser and
+interact with the application to get a sense of its features.
+
+
+<!--## Important Commands
+### 1. Running the Server
+To run the server, run: 
+```sh
+
+```
+
+To simply run the server, run:
+```sh
+npm start
+```
+
+### 2. Resetting/Seeding the Data
+To copy data from the `./db/seeds.json` file to the `./db/db.json` file, run:
+```sh
+npm run seed
+```
+This will reset the database back to the original data. -->
+
+## Bugs
+There are no bugs. Please report any new bugs encountered.
 
 ### Requirements
 The following have to be met for this project:
@@ -60,7 +120,7 @@ The following have to be met for this project:
 
 ## Getting Started
 
-### Backend Setup
+### Backend 
 
 First I setup my backend which had the following file structure:
  
@@ -126,4 +186,28 @@ After creating the project locally, I went on and created a Github repo
 
 
 ```
+
+
+### IN PROGRESS
+I'm currently working on the signup and sign in pages
+
+
+### Support/ Contact Details:
+- wanjikukimani24@gmail.com
+- (+254) 0797493262
+
+### License
+Copyright 2023 Faith Kimani
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
