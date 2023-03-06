@@ -192,10 +192,8 @@ After creating the project locally, I went on and created a Github repo
 ### HOME PAGE
 ![alt text](./screenshots/homePage%20banner.png)
 ![alt text](./screenshots/homePage%20rows.png)
-![alt text](./screenshots/homePage%20banner.png)
-
-
 ### MY LIST
+![alt text](./screenshots/MyList%20page.png)
 ![alt text](./screenshots/My%20List%20review.png)
 
 ### ADD MOVIE
