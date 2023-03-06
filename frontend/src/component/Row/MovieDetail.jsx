@@ -58,7 +58,10 @@ function MovieDetail() {
                         {genre.split(",").map(g=>(<li className='genre_item'>{g}</li>))}
                     </div>
                     <div className="reviews">
-                        <Review reviews={reviews}/>
+                        <h1>REVIEWS</h1>
+                        {reviews.map(review=>(
+                            <Review review={review}/>
+                        ))}
                     <div className='review_form'>
                         <ReviewForm id={movie.id}/>
                     </div>

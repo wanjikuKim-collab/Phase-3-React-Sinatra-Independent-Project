@@ -1,6 +1,6 @@
 import React from 'react'
 
-function MoreInfo({movie}) {
+function MoreInfo() {
   return (
     <>
         <div className="itemInfoTop">
