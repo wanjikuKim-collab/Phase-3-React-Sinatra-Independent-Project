@@ -21,7 +21,7 @@ function RowItem({movie,onDeleteItem}){
             alt={movie.title} />
             <div className="item_info">
                 <div className="icons">
-                    <Icons/>
+                    <Icons handleDelete={handleDeleteClick}/>
                     <div className="dropdown">
                         <NavLink to={`/mylist/${movie.id}`}><i className="icon angle down circle" style={{marginLeft: '10px'}}/></NavLink>
                     </div>
