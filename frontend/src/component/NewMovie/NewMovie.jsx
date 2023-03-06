@@ -30,11 +30,15 @@ const[genre,setGenre]= useState("")
     
     return (
         <section className='App d-flex flex-column align-items-center' id="form">
-            <h1>Add New Show</h1>
-            <Form style={{ width: '300px' }} onSubmit={handleSubmit}>
+            <h1 style={{color: "white" }}  >Add New Show</h1>
+            <Form style={{ width: '300px', color: "white" }} onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" >
                 <Form.Label htmlFor="title">Title:</Form.Label>
-                <Form.Control type="text" id="title" value={title} onChange={e => setTitle(e.target.value)} />
+                <Form.Control 
+                type="text" 
+                id="title" 
+                value={title} 
+                onChange={e => setTitle(e.target.value)} />
                 </Form.Group>
                 <Form.Group className="mb-3" >
                 <Form.Label htmlFor="image">Image:</Form.Label>

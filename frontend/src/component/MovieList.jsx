@@ -2,7 +2,6 @@ import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import Icons from './Row/Icons'
-import { NavLink } from 'react-router-dom'
 import './Row/Row.css'
 import MoreInfo from './Row/MoreInfo'
 
