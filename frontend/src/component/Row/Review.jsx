@@ -9,6 +9,7 @@ function Review({review}) {
       .then((r) => r.json())
       .then(() => console.log('deleted!!!') )
   }
+
   return (
     <div class="border-bottom">
       <div style={{display: 'flex',color:'green'}}>
@@ -20,7 +21,6 @@ function Review({review}) {
       </div>               
       <li id={review.id} className='review'>{review.comment} 
         <span>
-          <i className="icon edit"/>
           <i className="icon close" onClick={handleDelete}/>
         </span>
       </li>                        

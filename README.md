@@ -8,8 +8,8 @@ My application is a simple movie review app. You can Create a new review, view(R
 
 This project is separated into two applications:
 
-- A React frontend, in the `rateflix-client` directory
-- A Sinatra backend, in the `rateflix-server` directory
+- A React frontend, in the `frontend` directory
+- A Sinatra backend, in the `backend` directory
 
 
 The focus of this project is **building a Sinatra API backend** that uses
@@ -27,7 +27,7 @@ by a separate **React frontend** that interacts with the database via the API.
 
 ### Deployment
 
-- The frontend component is found here: [Netflix Clone frontend ]().
+- The frontend component is found here: [Netflix Clone frontend ](https://rateflix-e0ab0.web.app/).
 
 - The backend component ().
 
@@ -163,8 +163,12 @@ Review.create(ratings: 4.7, comment: "The whole show keeps me stuck in my seat. 
 Viewer.create(name: "Patricia Sibaja")
 
 puts "✅ Done seeding!
+
 ```
 
+### Entity Relationship Diagram
+https://dbdiagram.io/d/63fd8f6e296d97641d8433de
+![alt text](./screenshots/ERD.png)
 #### Setting up the necessary routes to handle requests
 To handle the necessary CRUD operations I built out the following routes:
 
@@ -178,15 +182,13 @@ frontend. I used[create-react-app][] to generate the necessary code for your Rea
 ```console
 $ npx create-react-app my-app-frontend
 ```
+ I went on and created the various components and pages.
 
 After creating the project locally, I went on and created a Github repo
 [create a repository on GitHub][create repo] to host my repo.
 
-### Fetch Example
-
-
-```
-
+## VIDEO PREVIEW
+[![Watch the video](./screenshots/Screencast%20from%2003-06-2023%2006%3A00%3A18%20PM.webm)
 
 ### IN PROGRESS
 I'm currently working on the signup and sign in pages
