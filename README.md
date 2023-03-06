@@ -187,8 +187,7 @@ $ npx create-react-app my-app-frontend
 After creating the project locally, I went on and created a Github repo
 [create a repository on GitHub][create repo] to host my repo.
 
-## VIDEO PREVIEW and SCREENSHOTS
-[![Watch the video](./screenshots/Screencast%20from%2003-06-2023%2006%3A00%3A18%20PM.webm)
+## SCREENSHOTS
 
 ### HOME PAGE
 ![alt text](./screenshots/homePage%20banner.png)
