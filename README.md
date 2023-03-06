@@ -196,7 +196,6 @@ After creating the project locally, I went on and created a Github repo
 
 
 ### MY LIST
-![alt text](./screenshots/MyList%20page.png)
 ![alt text](./screenshots/My%20List%20review.png)
 
 ### ADD MOVIE
