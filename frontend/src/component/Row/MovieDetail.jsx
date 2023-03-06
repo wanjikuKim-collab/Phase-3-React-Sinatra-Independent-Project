@@ -22,7 +22,7 @@ function MovieDetail() {
 
     if (!movie) return <h2>Loading...</h2>
     
-    const { id,image,overview,genre,reviews } = movie   
+    const {image,overview,genre,reviews } = movie   
     return (        
         <section className="movie_detail">
             <NavBar/>

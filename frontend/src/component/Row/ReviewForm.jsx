@@ -1,6 +1,5 @@
 import Form from 'react-bootstrap/Form'
 import { Button } from 'react-bootstrap'
-import React,{useState} from 'react'
 
 function ReviewForm({id}){
   const handleSubmit=e=>{
